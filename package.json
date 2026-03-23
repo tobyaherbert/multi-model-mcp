@@ -1,0 +1,32 @@
+{
+  "name": "@taherb/multi-model-mcp",
+  "version": "1.0.1",
+  "description": "An MCP server that provides access to other LLMs via an OpenAI compatible API.",
+  "author": "Toby Herbert",
+  "keywords": [
+    "llm",
+    "multi-model",
+    "mcp"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/tobyaherbert/multi-model-mcp",
+  "type": "module",
+  "scripts": {
+    "dev": "node --import tsx src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --banner:js='#!/usr/bin/env node' --outfile=dist/multi-model-mcp.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "multi-model-mcp": "./dist/multi-model-mcp.js"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@types/node": "^25.5.0",
+    "esbuild": "^0.27.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
+  }
+}
